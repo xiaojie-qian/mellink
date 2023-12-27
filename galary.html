@@ -55,21 +55,27 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
     </style>
 
-<<style>
+<style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0px;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #4d41e0; /* Primary color */
+            margin-bottom: 10px; /* Adjust the margin as needed */
         }
 
         .image-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px; /* Adjust the gap between images as needed */
         }
 
         .image {
-            width: 100%;
-            height: auto;
+            border-radius: 5px;
+            margin: 0; /* Remove default margin */
         }
     </style>
 
