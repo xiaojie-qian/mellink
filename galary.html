@@ -67,16 +67,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         }
 
         .image-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-content: flex-start; /* Add this line to control wrapping effect */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Minimum 200px width, fill available space */
             gap: 5px; /* Adjust the gap between images as needed */
         }
 
         .image {
             border-radius: 5px;
-            width: calc(33.33% - 5px); /* 3 columns with gap */
+            width: 100%;
             object-fit: cover;
             object-position: center;
             margin-bottom: 5px; /* Adjust the margin between images as needed */
