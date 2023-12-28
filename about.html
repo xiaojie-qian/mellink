@@ -8,7 +8,7 @@
 <meta name='robots' content='max-image-preview:large' />
 <title>About Mellink</title>
 <meta name='description' content='Mellink website'>
-
+<link rel="icon" type="image/png" href="/mellink/images/icon.png">
     
 <style id='wp-block-site-title-inline-css'>
 .wp-block-site-title a{color:inherit}
@@ -94,12 +94,51 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 .wp-container-core-navigation-layout-1.wp-container-core-navigation-layout-1{justify-content:flex-end;}.wp-container-core-group-layout-3.wp-container-core-group-layout-3{justify-content:space-between;}.wp-container-core-group-layout-5.wp-container-core-group-layout-5 > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:480px;margin-left:auto !important;margin-right:auto !important;}.wp-container-core-group-layout-5.wp-container-core-group-layout-5 > .alignwide{max-width:480px;}.wp-container-core-group-layout-5.wp-container-core-group-layout-5 .alignfull{max-width:none;}.wp-container-core-group-layout-5.wp-container-core-group-layout-5 > .alignfull{margin-right:calc(var(--wp--preset--spacing--40) * -1);margin-left:calc(var(--wp--preset--spacing--40) * -1);}.wp-elements-6115f8052bf116a1b9cd41c0894d1d99 a{color:var(--wp--preset--color--background);}.wp-container-core-group-layout-6.wp-container-core-group-layout-6 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-layout-6.wp-container-core-group-layout-6.wp-container-core-group-layout-6.wp-container-core-group-layout-6 > * + *{margin-block-start:var(--wp--preset--spacing--20);margin-block-end:0;}.wp-elements-e3058893ca583c31af549cb6e04f0a62 a{color:var(--wp--preset--color--background);}.wp-container-core-group-layout-7.wp-container-core-group-layout-7 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-layout-7.wp-container-core-group-layout-7.wp-container-core-group-layout-7.wp-container-core-group-layout-7 > * + *{margin-block-start:var(--wp--preset--spacing--20);margin-block-end:0;}.wp-elements-06be89c15c3242eb3ee83dd47ec7b4e7 a{color:var(--wp--preset--color--background);}.wp-container-core-group-layout-8.wp-container-core-group-layout-8 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-layout-8.wp-container-core-group-layout-8.wp-container-core-group-layout-8.wp-container-core-group-layout-8 > * + *{margin-block-start:var(--wp--preset--spacing--20);margin-block-end:0;}.wp-container-core-columns-layout-1.wp-container-core-columns-layout-1{flex-wrap:nowrap;}.wp-container-core-group-layout-10.wp-container-core-group-layout-10{justify-content:center;}.wp-container-core-group-layout-12.wp-container-core-group-layout-12 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-layout-12.wp-container-core-group-layout-12.wp-container-core-group-layout-12.wp-container-core-group-layout-12 > * + *{margin-block-start:0;margin-block-end:0;}.wp-container-core-social-links-layout-1.wp-container-core-social-links-layout-1{gap:16px 16px;}.wp-container-core-column-layout-4.wp-container-core-column-layout-4 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-column-layout-4.wp-container-core-column-layout-4.wp-container-core-column-layout-4.wp-container-core-column-layout-4 > * + *{margin-block-start:16px;margin-block-end:0;}.wp-elements-70a2ff495c5689f92b18959d58bb4843 a{color:var(--wp--preset--color--background);}.wp-container-core-column-layout-6.wp-container-core-column-layout-6 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-column-layout-6.wp-container-core-column-layout-6.wp-container-core-column-layout-6.wp-container-core-column-layout-6 > * + *{margin-block-start:0px;margin-block-end:0;}.wp-container-core-columns-layout-2.wp-container-core-columns-layout-2{flex-wrap:nowrap;gap:40px;}
 
     </style>
+    <style>
+/* Default styles for larger screens */
+#main-nav {
+    display: flex;
+    justify-content: flex-end; /* Align menu items to the right */
+}
+
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    #main-nav {
+        display: none;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    #main-nav.show {
+        display: flex;
+    }
+
+    #main-nav li {
+        margin-bottom: 5px; /* Adjust the margin to control the spacing between <li> elements */
+    }
+
+    #main-nav a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block; /* Display the toggle button only on smaller screens */
+        cursor: pointer;
+    }
+}
+</style>
+
 
 
 
 
 <div class="wp-site-blocks">
-    <header class="wp-block-template-part">
+<header class="wp-block-template-part">
 <div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-right:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">
 <div class="wp-block-group alignwide is-content-justification-space-between is-layout-flex wp-container-core-group-layout-3 wp-block-group-is-layout-flex" style="padding-top:2em;padding-bottom:4em">
 <div class="wp-block-group is-layout-flex wp-block-group-is-layout-flex">
@@ -120,14 +159,33 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </div>
 
 <div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
-                                <ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/mellink/about.html"><span class="wp-block-navigation-item__label">关于我们</span></a></li>
+    <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+    <ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation" id="main-nav">
+        <li class="wp-block-navigation-item wp-block-navigation-link">
+            <a class="wp-block-navigation-item__content" href="/mellink/about.html">
+                <span class="wp-block-navigation-item__label">关于我们</span>
+            </a>
+        </li>
 
-                                <li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/mellink/service.html"><span class="wp-block-navigation-item__label">我们的服务</span></a></li>
+        <li class="wp-block-navigation-item wp-block-navigation-link">
+            <a class="wp-block-navigation-item__content" href="/mellink/service.html">
+                <span class="wp-block-navigation-item__label">我们的服务</span>
+            </a>
+        </li>
 
-                                <li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/mellink/galary.html"><span class="wp-block-navigation-item__label">设计展示</span></a></li>
+        <li class="wp-block-navigation-item wp-block-navigation-link">
+            <a class="wp-block-navigation-item__content" href="/mellink/galary.html">
+                <span class="wp-block-navigation-item__label">设计展示</span>
+            </a>
+        </li>
 
-                                <li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="/mellink/contact.html"><span class="wp-block-navigation-item__label">联系我们</span></a></li></ul>
-                            </div>
+        <li class="wp-block-navigation-item wp-block-navigation-link">
+            <a class="wp-block-navigation-item__content" href="/mellink/contact.html">
+                <span class="wp-block-navigation-item__label">联系我们</span>
+            </a>
+        </li>
+    </ul>
+</div>
                         </div>
                     </div>
                 </div></nav></div>
@@ -172,7 +230,44 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         <p>Mellink的设计巧妙地融合了当代风格与上海丰富文化的精髓，每一款配饰都是一个故事，诉说着激情、精准和这座城市以及现代与传统交织的和谐交融。我们拥抱时尚与文化的融合，与Mellink独特的创作共舞。我们的使命是通过这些精美的设计，为时尚与文化的交汇点织就一幅引人入胜的画卷。</p>
         </div>
     </div>
+
+    <script>
+    function toggleMenu() {
+        var nav = document.getElementById('main-nav');
+        nav.classList.toggle('show');
+
+        // Additional logic to hide back-to-top button when menu is toggled
+        var backButton = document.getElementById('back-to-top');
+        if (backButton) {
+            backButton.style.display = 'none';
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Function to show/hide the back-to-top button based on scroll position
+    function toggleBackToTopButton() {
+        var button = document.getElementById('back-to-top');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = 'block';
+        } else {
+            button.style.display = 'none';
+        }
+    }
+
+    // Attach the toggleBackToTopButton function to the scroll event
+    window.onscroll = function() {
+        toggleBackToTopButton();
+    };
+</script>
+
 <p></p>
+
 </body>
 
 <footer class="site-footer-container wp-block-template-part">
