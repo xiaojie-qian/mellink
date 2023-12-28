@@ -54,58 +54,44 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
     </style>
 
-
 <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
+/* Your existing styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
 
-        h1 {
-            color: #4d41e0; /* Primary color */
-            margin-bottom: 10px; /* Adjust the margin as needed */
-        }
+h1 {
+    color: #4d41e0; /* Primary color */
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
 
-        .image-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px; /* Adjust the gap between images as needed */
-        }
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Adjust the gap between images as needed */
+}
 
-        .image {
-            border-radius: 5px;
-            width: calc(33.33% - 5px); /* 3 columns with gap */
-            object-fit: cover;
-            object-position: center;
-            margin-bottom: 5px; /* Adjust the margin between images as needed */
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            adjustImageOrder();
-        });
+.image {
+    border-radius: 5px;
+    width: calc(33.33% - 5px); /* 3 columns with gap */
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 5px; /* Adjust the margin between images as needed */
+}
 
-        function adjustImageOrder() {
-            var container = document.querySelector(".image-container");
-            var images = Array.from(document.querySelectorAll(".image"));
-            
-            for (var i = 3; i < images.length; i += 3) {
-                var currentRowImages = images.slice(i, i + 3);
-                var prevRowImages = images.slice(i - 3, i);
+/* Additional styles for title and tagline */
+.wp-block-group.is-layout-flow {
+    text-align: left;
+}
 
-                for (var j = 0; j < currentRowImages.length; j++) {
-                    var prevImageHeight = prevRowImages[j].offsetHeight;
-                    var currentImageHeight = currentRowImages[j].offsetHeight;
+.wp-block-site-title,
+.wp-block-site-tagline {
+    margin: 0; /* Adjust the margin as needed */
+}
 
-                    if (currentImageHeight < prevImageHeight) {
-                        container.insertBefore(currentRowImages[j], prevRowImages[j]);
-                    }
-                }
-            }
-        }
-    </script>
-
+  </style>  
 
 
 
@@ -151,7 +137,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 <div class="wp-site-blocks">
-    <header class="wp-block-template-part">
+<header class="wp-block-template-part">
 <div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-right:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">
 <div class="wp-block-group alignwide is-content-justification-space-between is-layout-flex wp-container-core-group-layout-3 wp-block-group-is-layout-flex" style="padding-top:2em;padding-bottom:4em">
 <div class="wp-block-group is-layout-flex wp-block-group-is-layout-flex">
@@ -212,15 +198,15 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
   <div class="image-container">
-        <img src="/mellink/images/btn_1.jpg" alt="" class="image" style="height: 500px;">
-        <img src="/mellink/images/btn_2.jpg" alt="" class="image" style="height: 350px;">
-        <img src="/mellink/images/btn_3.jpg" alt="" class="image" style="height: 500px;">
-        <img src="/mellink/images/btn_4.jpg" alt="" class="image" style="height: 520px;">
-        <img src="/mellink/images/btn_5.jpg" alt="" class="image" style="height: 400px;">
-        <img src="/mellink/images/btn_6.jpg" alt="" class="image" style="height: 440px;">
-        <img src="/mellink/images/btn_7.jpg" alt="" class="image" style="height: 490px;">
-        <img src="/mellink/images/btn_8.jpg" alt="" class="image" style="height: 510px;">
-        <img src="/mellink/images/btn_9.jpg" alt="" class="image" style="height: 530px;">
+        <img src="/mellink/images/btn_1.jpg" alt="" class="image" style="height: 550px;">
+        <img src="/mellink/images/btn_2.jpg" alt="" class="image" style="height: 550px;">
+        <img src="/mellink/images/btn_3.jpg" alt="" class="image" style="height: 550px;">
+        <img src="/mellink/images/btn_4.jpg" alt="" class="image" style="height: 550px;">
+        <img src="/mellink/images/btn_5.jpg" alt="" class="image" style="height: 550px;">
+        <img src="/mellink/images/btn_6.jpg" alt="" class="image" style="height: 550px;">
+        <img src="/mellink/images/btn_7.jpg" alt="" class="image" style="height: 550px;">
+        <img src="/mellink/images/btn_8.jpg" alt="" class="image" style="height: 550px;">
+        <img src="/mellink/images/btn_9.jpg" alt="" class="image" style="height: 550px;">
     </div>
 
 <script>
