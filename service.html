@@ -173,30 +173,24 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 #main-nav {
     display: flex;
     justify-content: flex-end; /* Align menu items to the right */
-    
 }
 
 .menu-toggle {
     display: none; /* Hide the toggle button by default */
-   
 }
 
 /* Responsive styles for smaller screens */
-    /* Existing styles */
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
         cursor: pointer;
-        
-}
     }
 
     #main-nav {
         display: none;
         flex-direction: column;
-        text-align: centre;
+        text-align: center; /* Corrected typo: center instead of centre */
         padding: 10px; /* Add padding to space out items */
-        
     }
 
     #main-nav.show {
@@ -207,12 +201,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 /* Additional styles for right alignment of navigation items */
 #main-nav {
-    padding: 0px; /* Add padding to space out items */
+    padding: 0; /* Add padding to space out items */
 }
 
 .wp-block-navigation-item {
-    margin-bottom: 0px; /* Adjust margin between items */
+    margin-bottom: 0; /* Adjust margin between items */
 }
+
+
 
 </style>
 
@@ -240,9 +236,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 <p style="margin-top:0px;" class="wp-block-site-tagline">Weaving a World of Beauty</p></div>
 </div>
-
-
-<div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
+  <div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
     <div class="menu-toggle" onclick="toggleMenu()" style="font-weight:bolder;">☰ Menu</div>
     <ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation" id="main-nav">
         <li class="wp-block-navigation-item wp-block-navigation-link">
@@ -270,6 +264,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         </li>
     </ul>
 </div>
+
+
+
                         </div>
                     </div>
                 </div></nav></div>
