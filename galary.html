@@ -54,6 +54,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
     </style>
 
+
 <style>
         body {
             font-family: Arial, sans-serif;
@@ -80,6 +81,33 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             margin-bottom: 5px; /* Adjust the margin between images as needed */
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            adjustImageOrder();
+        });
+
+        function adjustImageOrder() {
+            var container = document.querySelector(".image-container");
+            var images = Array.from(document.querySelectorAll(".image"));
+            
+            for (var i = 3; i < images.length; i += 3) {
+                var currentRowImages = images.slice(i, i + 3);
+                var prevRowImages = images.slice(i - 3, i);
+
+                for (var j = 0; j < currentRowImages.length; j++) {
+                    var prevImageHeight = prevRowImages[j].offsetHeight;
+                    var currentImageHeight = currentRowImages[j].offsetHeight;
+
+                    if (currentImageHeight < prevImageHeight) {
+                        container.insertBefore(currentRowImages[j], prevRowImages[j]);
+                    }
+                }
+            }
+        }
+    </script>
+
+
+
 
 <style>
 /* Default styles for larger screens */
@@ -120,28 +148,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 }
 </style>
 
-<script>
-        $(document).ready(function () {
-            adjustImageHeights();
-        });
 
-        function adjustImageHeights() {
-            var rows = $(".image-container .image").length / 3;
-
-            for (var i = 0; i < rows; i++) {
-                var maxHeight = 0;
-
-                $(".image-container .image").slice(i * 3, (i + 1) * 3).each(function () {
-                    var height = $(this).height();
-                    if (height > maxHeight) {
-                        maxHeight = height;
-                    }
-                });
-
-                $(".image-container .image").slice(i * 3, (i + 1) * 3).height(maxHeight);
-            }
-        }
-    </script>
 
 <div class="wp-site-blocks">
     <header class="wp-block-template-part">
