@@ -105,43 +105,48 @@ h1 {
 
 <style>
 
-/* Default styles for larger screens */
-#main-nav {
+/* Your existing styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+h1 {
+    color: #4d41e0; /* Primary color */
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.image-container {
     display: flex;
-    justify-content: flex-end; /* Align menu items to the right */
+    flex-wrap: wrap;
+    gap: 5px; /* Adjust the gap between images as needed */
 }
 
-.menu-toggle {
-    display: none; /* Hide the toggle button by default */
+.image {
+    border-radius: 5px;
+    width: calc(33.33% - 5px); /* 3 columns with gap */
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 5px; /* Adjust the margin between images as needed */
 }
 
-/* Responsive styles for smaller screens */
+/* Additional styles for title and tagline */
+.wp-block-group.is-layout-flow {
+    text-align: left;
+}
+
+.wp-block-site-title,
+.wp-block-site-tagline {
+    margin: 0; /* Adjust the margin as needed */
+}
+
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
+    .image {
+        width: calc(50% - 5px); /* 2 columns with gap on smaller screens */
+        padding-top: calc(50% - 5px); /* Maintain 1:1 aspect ratio */
     }
-
-    #main-nav {
-        display: none;
-        flex-direction: column;
-        text-align: center; /* Corrected typo: center instead of centre */
-        padding: 10px; /* Add padding to space out items */
-    }
-
-    #main-nav.show {
-        display: flex;
-        justify-content: flex-end; /* Align items to the right */
-    }
-}
-
-/* Additional styles for right alignment of navigation items */
-#main-nav {
-    padding: 0; /* Add padding to space out items */
-}
-
-.wp-block-navigation-item {
-    margin-bottom: 0; /* Adjust margin between items */
 }
 
 
