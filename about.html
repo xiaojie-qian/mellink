@@ -79,6 +79,8 @@ body {
 }
 
 </style>
+
+
 <style>
         body {
             font-family: Arial, sans-serif;
@@ -111,35 +113,28 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
     <style>
 
-
 /* Default styles for larger screens */
 #main-nav {
     display: flex;
     justify-content: flex-end; /* Align menu items to the right */
-    
 }
 
 .menu-toggle {
     display: none; /* Hide the toggle button by default */
-   
 }
 
 /* Responsive styles for smaller screens */
-    /* Existing styles */
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
         cursor: pointer;
-        
-}
     }
 
     #main-nav {
         display: none;
         flex-direction: column;
-        text-align: centre;
+        text-align: center; /* Corrected typo: center instead of centre */
         padding: 10px; /* Add padding to space out items */
-        
     }
 
     #main-nav.show {
@@ -150,12 +145,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 /* Additional styles for right alignment of navigation items */
 #main-nav {
-    padding: 0px; /* Add padding to space out items */
+    padding: 0; /* Add padding to space out items */
 }
 
 .wp-block-navigation-item {
-    margin-bottom: 0px; /* Adjust margin between items */
+    margin-bottom: 0; /* Adjust margin between items */
 }
+
+
 
 </style>
 
@@ -230,7 +227,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         <h2>Our Story</h2>
         <p>我们是Mellink，由几位热爱时尚、注重细节的年轻女性于2016年创立。我们的远见体现在对卓越服饰配饰的执着奉献，不断追求工艺精湛和对细节的敏感洞察力。根植于上海这座充满活力的城市，我们的使命是打造反映现代优雅精髓的卓越服饰配饰。</p>
     </div>
-    <div class="column">
+    <div class="column image-column">
         <img loading="lazy" src="/mellink/images/about_1.jpg" alt="Mellink story" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
     </div>
 </div>
@@ -248,7 +245,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
         <div class="container" style="display: flex; align-items: stretch;">
-        <div class="column">
+        <div class="column image-column">
             <img loading="lazy" src="/mellink/images/about_2.jpg" alt="Mellink mission" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
         </div>
         <div class="column text-column" style="text-align: left;">
