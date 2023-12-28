@@ -67,14 +67,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         }
 
         .image-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Minimum 200px width, fill available space */
+            display: flex;
+            flex-wrap: wrap;
             gap: 5px; /* Adjust the gap between images as needed */
         }
 
         .image {
             border-radius: 5px;
-            width: 100%;
+            width: calc(33.33% - 5px); /* 3 columns with gap */
             object-fit: cover;
             object-position: center;
             margin-bottom: 5px; /* Adjust the margin between images as needed */
@@ -120,7 +120,28 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 }
 </style>
 
+<script>
+        $(document).ready(function () {
+            adjustImageHeights();
+        });
 
+        function adjustImageHeights() {
+            var rows = $(".image-container .image").length / 3;
+
+            for (var i = 0; i < rows; i++) {
+                var maxHeight = 0;
+
+                $(".image-container .image").slice(i * 3, (i + 1) * 3).each(function () {
+                    var height = $(this).height();
+                    if (height > maxHeight) {
+                        maxHeight = height;
+                    }
+                });
+
+                $(".image-container .image").slice(i * 3, (i + 1) * 3).height(maxHeight);
+            }
+        }
+    </script>
 
 <div class="wp-site-blocks">
     <header class="wp-block-template-part">
