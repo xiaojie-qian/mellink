@@ -42,6 +42,7 @@
 </style>
 
 <style>
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -50,29 +51,34 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: wrap; /* Allow columns to wrap to the next row on smaller screens */
+    flex-direction: column; /* Stack columns vertically by default */
 }
 
 .column {
-    flex: 1; /* Equal width for both columns */
-    box-sizing: border-box;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .text-column {
     background-color: #ffffff;
 }
 
-/* Adjust the width of the text column on wider screens if needed */
+/* Adjust layout on wider screens */
 @media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Arrange columns side by side on wider screens */
+    }
+
     .text-column {
         flex: 2; /* 40% of the space on wider screens */
+    }
+
+    .image-column {
+        flex: 3; /* 60% of the space on wider screens */
     }
 }
 
 </style>
-
-
 <style>
         body {
             font-family: Arial, sans-serif;
