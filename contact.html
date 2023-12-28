@@ -3,8 +3,8 @@
 
 <head>
  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name='robots' content='max-image-preview:large' />
 <title>Contact Mellink</title>
 <meta name='description' content='Mellink website'>
@@ -40,6 +40,13 @@
 .wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;text-decoration: none;}
 .wp-block-navigation a:where(:not(.wp-element-button)):hover{text-decoration: underline;}
 </style>
+
+
+<style id='wp-block-button-inline-css'>
+.wp-block-button__link{box-sizing:border-box;cursor:pointer;display:inline-block;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}.wp-block-button .wp-block-button__link.is-style-outline,.wp-block-button.is-style-outline>.wp-block-button__link{border:2px solid;padding:.667em 1.333em}.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color),.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color){color:currentColor}.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background),.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background){background-color:transparent;background-image:none}.wp-block-button .wp-block-button__link:where(.has-border-color){border-width:initial}.wp-block-button .wp-block-button__link:where([style*=border-top-color]){border-top-width:medium}.wp-block-button .wp-block-button__link:where([style*=border-right-color]){border-right-width:medium}.wp-block-button .wp-block-button__link:where([style*=border-bottom-color]){border-bottom-width:medium}.wp-block-button .wp-block-button__link:where([style*=border-left-color]){border-left-width:medium}.wp-block-button .wp-block-button__link:where([style*=border-style]){border-width:initial}.wp-block-button .wp-block-button__link:where([style*=border-top-style]){border-top-width:medium}.wp-block-button .wp-block-button__link:where([style*=border-right-style]){border-right-width:medium}.wp-block-button .wp-block-button__link:where([style*=border-bottom-style]){border-bottom-width:medium}.wp-block-button .wp-block-button__link:where([style*=border-left-style]){border-left-width:medium}
+.wp-block-button .wp-block-button__link{background-color: #ff914d ;line-height: 1;padding-top: var(--wp--preset--spacing--40);padding-bottom: var(--wp--preset--spacing--40);}.is-style-outline.is-style-outline.wp-block-button .wp-block-button__link{border-color: var(--wp--preset--color--secondary);color: var(--wp--preset--color--secondary);padding-top: 14px;padding-bottom: 14px;}
+</style>
+
 
 
 
@@ -114,7 +121,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         }
 
         button {
-            background-color: #ff914d; /* Primary color */
+            background-color: ; /* Primary color */
             color: #fff;
             padding: 10px 20px;
             border: none;
@@ -123,48 +130,62 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         }
 
         button:hover {
-            background-color: #ffd700; /* Hover color */
+            background-color: #005ae1; /* Hover color */
         }
+    
     </style>
+
+
+
     <style>
+
+
 /* Default styles for larger screens */
 #main-nav {
     display: flex;
     justify-content: flex-end; /* Align menu items to the right */
+    
 }
 
 .menu-toggle {
     display: none; /* Hide the toggle button by default */
+   
 }
 
 /* Responsive styles for smaller screens */
+    /* Existing styles */
 @media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        
+}
+    }
+
     #main-nav {
         display: none;
         flex-direction: column;
-        text-align: left;
+        text-align: centre;
+        padding: 10px; /* Add padding to space out items */
+        
     }
 
     #main-nav.show {
         display: flex;
-    }
-
-    #main-nav li {
-        margin-bottom: 5px; /* Adjust the margin to control the spacing between <li> elements */
-    }
-
-    #main-nav a {
-        display: block;
-        padding: 10px;
-    }
-
-    .menu-toggle {
-        display: block; /* Display the toggle button only on smaller screens */
-        cursor: pointer;
+        justify-content: flex-end; /* Align items to the right */
     }
 }
-</style>
 
+/* Additional styles for right alignment of navigation items */
+#main-nav {
+    padding: 0px; /* Add padding to space out items */
+}
+
+.wp-block-navigation-item {
+    margin-bottom: 0px; /* Adjust margin between items */
+}
+
+</style>
 
 
 
@@ -192,7 +213,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 <div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
-    <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+    <div class="menu-toggle" onclick="toggleMenu()" style="font-weight:bolder;">☰ Menu</div>
     <ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation" id="main-nav">
         <li class="wp-block-navigation-item wp-block-navigation-link">
             <a class="wp-block-navigation-item__content" href="/mellink/about.html">
@@ -241,7 +262,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <input type="text" id="form-name" name="name" placeholder="姓名" required>
 
                 <label for="form-email">您的公司:</label>
-                <input type="email" id="form-email" name="_replyto" placeholder="公司" required>
+                <input type="company" id="form-email" name="_replyto" placeholder="公司" required>
 
                 <label for="form-email">您的邮箱:</label>
                 <input type="email" id="form-email" name="_replyto" placeholder="邮箱" required>
@@ -249,7 +270,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <label for="form-message">您的留言:</label>
                 <textarea id="form-message" name="message" rows="5" placeholder="留言" required></textarea>
 
+                <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+                <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" type="submit">发送消息</a></div>
+<!--
                 <button type="submit">发送消息</button>
+            -->
             </form>
         </div>
 
@@ -274,9 +299,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 </div>
 
                 <div class="office">
-                    <h4>Berlin Office</h4>
+                    <h4>柏林办事处</h4>
                     <p>Kleiner Parkweg 1, 12683, Berlin</p>
-                    <p>Tel: (021) 6335 6353</p>
+                    <p>Tel: (+) 49 160 6740 392</p>
                 </div>
             </div>
 
