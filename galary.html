@@ -55,47 +55,43 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     </style>
 
 <style>
-/* Your existing styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
-}
-
-h1 {
-    color: #4d41e0; /* Primary color */
-    margin-bottom: 10px; /* Adjust the margin as needed */
-}
-
-.image-container {
+/* Default styles for larger screens */
+#main-nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: 5px; /* Adjust the gap between images as needed */
+    justify-content: flex-end; /* Align menu items to the right */
 }
 
-.image {
-    border-radius: 5px;
-    width: calc(33.33% - 5px); /* 3 columns with gap */
-    object-fit: cover;
-    object-position: center;
-    margin-bottom: 5px; /* Adjust the margin between images as needed */
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
 }
 
-/* Additional styles for title and tagline */
-.wp-block-group.is-layout-flow {
-    text-align: left;
-}
-
-.wp-block-site-title,
-.wp-block-site-tagline {
-    margin: 0; /* Adjust the margin as needed */
-}
-
-/* Media query for smaller screens */
+/* Responsive styles for smaller screens */
 @media screen and (max-width: 768px) {
-    .image {
-        width: calc(50% - 5px); /* 2 columns with gap on smaller screens */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
     }
+
+    #main-nav {
+        display: none;
+        flex-direction: column;
+        text-align: center; /* Corrected typo: center instead of centre */
+        padding: 10px; /* Add padding to space out items */
+    }
+
+    #main-nav.show {
+        display: flex;
+        justify-content: flex-end; /* Align items to the right */
+    }
+}
+
+/* Additional styles for right alignment of navigation items */
+#main-nav {
+    padding: 0; /* Add padding to space out items */
+}
+
+.wp-block-navigation-item {
+    margin-bottom: 0; /* Adjust margin between items */
 }
 
 
@@ -178,7 +174,7 @@ h1 {
 </div>
 
 
-<div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
+  <div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
     <div class="menu-toggle" onclick="toggleMenu()" style="font-weight:bolder;">☰ Menu</div>
     <ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation" id="main-nav">
         <li class="wp-block-navigation-item wp-block-navigation-link">
@@ -229,6 +225,14 @@ h1 {
         <img src="/mellink/images/btn_9.jpg" alt="" class="image" style="height: 550px;">
     </div>
 
+
+</div>
+
+
+</div>
+</div>
+</div>
+
 <script>
     function toggleMenu() {
         var nav = document.getElementById('main-nav');
@@ -263,12 +267,6 @@ h1 {
         toggleBackToTopButton();
     };
 </script>
-</div>
-
-
-</div>
-</div>
-</div>
 <br><br>
 
 </body>
