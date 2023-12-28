@@ -2,16 +2,14 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name='robots' content='max-image-preview:large' />
 <title>Mellink &#8211; Weaving a World of Beauty</title>
 <meta name='description' content='Mellink website'>
 
-
-
-
+<link rel="icon" type="image/png" href="/mellink/images/icon.png">
 
 <style id='wp-block-site-title-inline-css'>
 .wp-block-site-title a{color:inherit}
@@ -152,15 +150,24 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     #main-nav {
         display: none;
         flex-direction: column;
-        text-align: center;
+        text-align: left; /* Updated: Align menu items to the left */
     }
 
     #main-nav.show {
         display: flex;
     }
-}
 
+    #main-nav li {
+        margin: 10px 0; /* Added: Adjust spacing between menu items */
+    }
+
+    #main-nav a {
+        display: block;
+        padding: 10px; /* Added: Add padding for better touch/click target */
+    }
+}
 </style>
+
 
 <link crossorigin='anonymous' rel='stylesheet' id='all-css-38-1' href='https://s0.wp.com/_static/??-eJx9jsEOwiAQRH9I3LSaxh6M30LpijTAkmWp8e+ll6YmhtvO5M3swDspQ1EwCsgLA2ZIZQLDqMWR6iHLx+PZ5HyCAxqKSr5YFzNYJOXJbHj8EerpteNWNJLUf3oOLqpJs1r7Fs04ebL1tFCpg2yFhHXMXguxWkpIWTTLX7NVsi+EoLMgb1tpRWY31/27t1U8wr0bxttluHXjdfkCbKWDVw==&cssminify=yes' type='text/css' media='all' />
 <style id='jetpack-global-styles-frontend-style-inline-css'>
@@ -359,14 +366,38 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <script>
     function toggleMenu() {
         var nav = document.getElementById('main-nav');
+        nav.classList.toggle('show');
 
-        if (nav) {
-            nav.classList.toggle('show');
-        } else {
-            console.error('Element with id "main-nav" not found.');
+        // Additional logic to hide back-to-top button when menu is toggled
+        var backButton = document.getElementById('back-to-top');
+        if (backButton) {
+            backButton.style.display = 'none';
         }
     }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Function to show/hide the back-to-top button based on scroll position
+    function toggleBackToTopButton() {
+        var button = document.getElementById('back-to-top');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = 'block';
+        } else {
+            button.style.display = 'none';
+        }
+    }
+
+    // Attach the toggleBackToTopButton function to the scroll event
+    window.onscroll = function() {
+        toggleBackToTopButton();
+    };
 </script>
+
 
 
 	
