@@ -91,11 +91,20 @@ h1 {
     margin: 0; /* Adjust the margin as needed */
 }
 
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .image {
+        width: calc(50% - 5px); /* 2 columns with gap on smaller screens */
+    }
+}
+
+
   </style>  
 
 
 
 <style>
+
 /* Default styles for larger screens */
 #main-nav {
     display: flex;
@@ -108,32 +117,36 @@ h1 {
 
 /* Responsive styles for smaller screens */
 @media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
     #main-nav {
         display: none;
         flex-direction: column;
-        text-align: left;
+        text-align: center; /* Corrected typo: center instead of centre */
+        padding: 10px; /* Add padding to space out items */
     }
 
     #main-nav.show {
         display: flex;
-    }
-
-    #main-nav li {
-        margin-bottom: 5px; /* Adjust the margin to control the spacing between <li> elements */
-    }
-
-    #main-nav a {
-        display: block;
-        padding: 10px;
-    }
-
-    .menu-toggle {
-        display: block; /* Display the toggle button only on smaller screens */
-        cursor: pointer;
+        justify-content: flex-end; /* Align items to the right */
     }
 }
-</style>
 
+/* Additional styles for right alignment of navigation items */
+#main-nav {
+    padding: 0; /* Add padding to space out items */
+}
+
+.wp-block-navigation-item {
+    margin-bottom: 0; /* Adjust margin between items */
+}
+
+
+
+</style>
 
 
 <div class="wp-site-blocks">
@@ -141,6 +154,8 @@ h1 {
 <div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-right:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">
 <div class="wp-block-group alignwide is-content-justification-space-between is-layout-flex wp-container-core-group-layout-3 wp-block-group-is-layout-flex" style="padding-top:2em;padding-bottom:4em">
 <div class="wp-block-group is-layout-flex wp-block-group-is-layout-flex">
+
+
 
 
 <div class="wp-block-site-logo">
@@ -159,7 +174,7 @@ h1 {
 
 
 <div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
-    <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+    <div class="menu-toggle" onclick="toggleMenu()" style="font-weight:bolder;">☰ Menu</div>
     <ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation" id="main-nav">
         <li class="wp-block-navigation-item wp-block-navigation-link">
             <a class="wp-block-navigation-item__content" href="/mellink/about.html">
@@ -249,7 +264,7 @@ h1 {
 </div>
 </div>
 </div>
-<br><br><br>
+<br><br>
 
 </body>
 
