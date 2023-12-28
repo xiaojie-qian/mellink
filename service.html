@@ -102,6 +102,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         flex: 3; /* 60% of the space on wider screens */
     }
 }
+</style>
+
+<style>
 
 /* Default styles for larger screens */
 #main-nav {
@@ -123,7 +126,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     #main-nav {
         display: none;
         flex-direction: column;
-        text-align: center;
+        text-align: center; /* Corrected typo: center instead of centre */
         padding: 10px; /* Add padding to space out items */
     }
 
@@ -131,12 +134,18 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         display: flex;
         justify-content: flex-end; /* Align items to the right */
     }
-
+}
 
 /* Additional styles for right alignment of navigation items */
 #main-nav {
-    padding: 0; /*
-  }
+    padding: 0; /* Add padding to space out items */
+}
+
+.wp-block-navigation-item {
+    margin-bottom: 0; /* Adjust margin between items */
+}
+
+
  
    </style>
 
