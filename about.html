@@ -41,28 +41,36 @@
 .wp-block-navigation a:where(:not(.wp-element-button)):hover{text-decoration: underline;}
 </style>
 
-
 <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .container {
-            display: flex;
-        }
-        .column {
-            flex: 3;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        .text-column {
-            flex: 2; /* 40% of the space */
-            background-color: #ffffff;
-        }
- 
-    </style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
 
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap to the next row on smaller screens */
+}
+
+.column {
+    flex: 1; /* Equal width for both columns */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.text-column {
+    background-color: #ffffff;
+}
+
+/* Adjust the width of the text column on wider screens if needed */
+@media screen and (min-width: 768px) {
+    .text-column {
+        flex: 2; /* 40% of the space on wider screens */
+    }
+}
+
+</style>
 
 
 <style>
@@ -94,45 +102,56 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 .wp-container-core-navigation-layout-1.wp-container-core-navigation-layout-1{justify-content:flex-end;}.wp-container-core-group-layout-3.wp-container-core-group-layout-3{justify-content:space-between;}.wp-container-core-group-layout-5.wp-container-core-group-layout-5 > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:480px;margin-left:auto !important;margin-right:auto !important;}.wp-container-core-group-layout-5.wp-container-core-group-layout-5 > .alignwide{max-width:480px;}.wp-container-core-group-layout-5.wp-container-core-group-layout-5 .alignfull{max-width:none;}.wp-container-core-group-layout-5.wp-container-core-group-layout-5 > .alignfull{margin-right:calc(var(--wp--preset--spacing--40) * -1);margin-left:calc(var(--wp--preset--spacing--40) * -1);}.wp-elements-6115f8052bf116a1b9cd41c0894d1d99 a{color:var(--wp--preset--color--background);}.wp-container-core-group-layout-6.wp-container-core-group-layout-6 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-layout-6.wp-container-core-group-layout-6.wp-container-core-group-layout-6.wp-container-core-group-layout-6 > * + *{margin-block-start:var(--wp--preset--spacing--20);margin-block-end:0;}.wp-elements-e3058893ca583c31af549cb6e04f0a62 a{color:var(--wp--preset--color--background);}.wp-container-core-group-layout-7.wp-container-core-group-layout-7 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-layout-7.wp-container-core-group-layout-7.wp-container-core-group-layout-7.wp-container-core-group-layout-7 > * + *{margin-block-start:var(--wp--preset--spacing--20);margin-block-end:0;}.wp-elements-06be89c15c3242eb3ee83dd47ec7b4e7 a{color:var(--wp--preset--color--background);}.wp-container-core-group-layout-8.wp-container-core-group-layout-8 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-layout-8.wp-container-core-group-layout-8.wp-container-core-group-layout-8.wp-container-core-group-layout-8 > * + *{margin-block-start:var(--wp--preset--spacing--20);margin-block-end:0;}.wp-container-core-columns-layout-1.wp-container-core-columns-layout-1{flex-wrap:nowrap;}.wp-container-core-group-layout-10.wp-container-core-group-layout-10{justify-content:center;}.wp-container-core-group-layout-12.wp-container-core-group-layout-12 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-group-layout-12.wp-container-core-group-layout-12.wp-container-core-group-layout-12.wp-container-core-group-layout-12 > * + *{margin-block-start:0;margin-block-end:0;}.wp-container-core-social-links-layout-1.wp-container-core-social-links-layout-1{gap:16px 16px;}.wp-container-core-column-layout-4.wp-container-core-column-layout-4 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-column-layout-4.wp-container-core-column-layout-4.wp-container-core-column-layout-4.wp-container-core-column-layout-4 > * + *{margin-block-start:16px;margin-block-end:0;}.wp-elements-70a2ff495c5689f92b18959d58bb4843 a{color:var(--wp--preset--color--background);}.wp-container-core-column-layout-6.wp-container-core-column-layout-6 > *{margin-block-start:0;margin-block-end:0;}.wp-container-core-column-layout-6.wp-container-core-column-layout-6.wp-container-core-column-layout-6.wp-container-core-column-layout-6 > * + *{margin-block-start:0px;margin-block-end:0;}.wp-container-core-columns-layout-2.wp-container-core-columns-layout-2{flex-wrap:nowrap;gap:40px;}
 
     </style>
+
     <style>
+
+
 /* Default styles for larger screens */
 #main-nav {
     display: flex;
     justify-content: flex-end; /* Align menu items to the right */
+    
 }
 
 .menu-toggle {
     display: none; /* Hide the toggle button by default */
+   
 }
 
 /* Responsive styles for smaller screens */
+    /* Existing styles */
 @media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        
+}
+    }
+
     #main-nav {
         display: none;
         flex-direction: column;
-        text-align: left;
+        text-align: centre;
+        padding: 10px; /* Add padding to space out items */
+        
     }
 
     #main-nav.show {
         display: flex;
-    }
-
-    #main-nav li {
-        margin-bottom: 5px; /* Adjust the margin to control the spacing between <li> elements */
-    }
-
-    #main-nav a {
-        display: block;
-        padding: 10px;
-    }
-
-    .menu-toggle {
-        display: block; /* Display the toggle button only on smaller screens */
-        cursor: pointer;
+        justify-content: flex-end; /* Align items to the right */
     }
 }
-</style>
 
+/* Additional styles for right alignment of navigation items */
+#main-nav {
+    padding: 0px; /* Add padding to space out items */
+}
+
+.wp-block-navigation-item {
+    margin-bottom: 0px; /* Adjust margin between items */
+}
+
+</style>
 
 
 
@@ -159,7 +178,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </div>
 
 <div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
-    <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+    <div class="menu-toggle" onclick="toggleMenu()" style="font-weight:bolder;">☰ Menu</div>
     <ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation" id="main-nav">
         <li class="wp-block-navigation-item wp-block-navigation-link">
             <a class="wp-block-navigation-item__content" href="/mellink/about.html">
@@ -197,6 +216,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <body>
    
         <h1>关于我们</h1>
+        <br>
 
 
   <div class="container" style="display: flex; align-items: stretch;">
