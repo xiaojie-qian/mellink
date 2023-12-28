@@ -144,30 +144,24 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 #main-nav {
     display: flex;
     justify-content: flex-end; /* Align menu items to the right */
-    
 }
 
 .menu-toggle {
     display: none; /* Hide the toggle button by default */
-   
 }
 
 /* Responsive styles for smaller screens */
-    /* Existing styles */
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
         cursor: pointer;
-        
-}
     }
 
     #main-nav {
-        display: none;
+        display: none; /* Hide the navigation by default on smaller screens */
         flex-direction: column;
-        text-align: centre;
+        text-align: center;
         padding: 10px; /* Add padding to space out items */
-        
     }
 
     #main-nav.show {
@@ -178,12 +172,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 /* Additional styles for right alignment of navigation items */
 #main-nav {
-    padding: 0px; /* Add padding to space out items */
+    padding: 0; /* Add padding to space out items */
 }
 
 .wp-block-navigation-item {
-    margin-bottom: 0px; /* Adjust margin between items */
+    margin-bottom: 0; /* Adjust margin between items */
 }
+
+
 
 </style>
 
@@ -191,7 +187,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 <div class="wp-site-blocks">
-    <header class="wp-block-template-part">
+<header class="wp-block-template-part">
 <div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-right:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">
 <div class="wp-block-group alignwide is-content-justification-space-between is-layout-flex wp-container-core-group-layout-3 wp-block-group-is-layout-flex" style="padding-top:2em;padding-bottom:4em">
 <div class="wp-block-group is-layout-flex wp-block-group-is-layout-flex">
@@ -210,6 +206,45 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 <p style="margin-top:0px;" class="wp-block-site-tagline">Weaving a World of Beauty</p></div>
 </div>
+/* Default styles for larger screens */
+#main-nav {
+    display: flex;
+    justify-content: flex-end; /* Align menu items to the right */
+}
+
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    #main-nav {
+        display: none;
+        flex-direction: column;
+        text-align: center; /* Corrected typo: center instead of centre */
+        padding: 10px; /* Add padding to space out items */
+    }
+
+    #main-nav.show {
+        display: flex;
+        justify-content: flex-end; /* Align items to the right */
+    }
+}
+
+/* Additional styles for right alignment of navigation items */
+#main-nav {
+    padding: 0; /* Add padding to space out items */
+}
+
+.wp-block-navigation-item {
+    margin-bottom: 0; /* Adjust margin between items */
+}
+
 
 
 <div class="wp-block-navigation__responsive-container-content" id="modal-1-content">
@@ -306,7 +341,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             </div>
 
         
-
+</div>
          
     </div>
 
@@ -346,6 +381,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         toggleBackToTopButton();
     };
 </script>
+
        
 <p></p>
 </body>
