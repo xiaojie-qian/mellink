@@ -68,19 +68,18 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         }
 
         .image-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             gap: 5px; /* Adjust the gap between images as needed */
         }
 
         .image {
             border-radius: 5px;
-            width: 100%;
+            width: calc(33.33% - 5px); /* 3 columns with gap */
             height: auto;
         }
-
     </style>
-
 
 
 <div class="wp-site-blocks">
